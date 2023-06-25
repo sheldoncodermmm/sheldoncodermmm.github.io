@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+    <title>Sheldon Miller Resume</title>
+  </head>
+    <body>
+      <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" style="background-color:rgba(60, 60, 60, 0.3);">
+        <header class="masthead mb-auto">
+          <div class="inner">
+            <h3 class="masthead-brand">Sheldon Miller,MBA,Security+</h3>
+            <nav class="nav nav-masthead justify-content-center">
+              <a class="nav-link" href="{{ url_for('education') }}">Education</a>
+              <a class="nav-link" href="{{ url_for('work_experience') }}">Work Experience</a>
+              <a class="nav-link" href="{{ url_for('coursework') }}">Technical Certifications & Coursework</a>
+              <a class="nav-link" href="{{ url_for('projects') }}">Projects</a>
+            </nav>
+          </div>
+
+        <h1 class="cover-heading">{% block heading %}{% endblock %}</h1>
+
+        {% block body %}
+        {% endblock %}
+
+        <footer class="mastfoot mt-auto">
+
+          <div class="inner">
+            <p>Mobile: <a href="tel:6783089996">678-308-9996</a> Email: <a href="mailto:sheldon.miller01@gmail.com?subject=feedback">Sheldon.miller01@gmail.com</a></p>
+            <p>Powered by <a href="https://intowntechnology.com/">InTown Technology, LLC</a>.</p>
+          </div>
+        </footer>
+      </div>
+    </body>
+</html>
